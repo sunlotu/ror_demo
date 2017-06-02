@@ -1,0 +1,32 @@
+<%= form_for([:admin,@role], html: { class: 'form-inline'}) do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: 'form-control', placeholder: '角色名称' %>
+    <%= f.text_field :code, class: 'form-control', placeholder: '角色代码' %>
+    <%= f.submit '确定', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>名称</th>
+      <th>代码</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @roles.each do |role| %>
+      <tr>
+        <td><%= role.name %></td>
+        <td><%= role.code %></td>
+        <td>
+          <%= link_to '编辑', edit_admin_role_path(role) %>
+          <%= link_to '删除', [:admin,role], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+---
+:concurrency: 5
+:pidfile: tmp/pids/sidekiq.pid
+:logfile: log/sidekiq.log
+:queues:
+  - default
+  - mailers
+:daemon: true
+
+production:
+  :concurrency: <%= ENV["CVBAOLI_RISK_CTRL_SIDEKIQ_CONCURRENCY"] || 25 %>
+  :daemon: false

@@ -1,0 +1,21 @@
+body {
+  background: #F7F7F7;
+  letter-spacing: .03em;
+  padding-top: 65px;
+}
+//input:-webkit-autofill {
+//  -webkit-box-shadow: 0 0 0px 1000px white inset;
+//
+//}
+.panel-default { border: solid 1px #ffffff; background: #ffffff; box-shadow: 0 0 8px rgba(0,0,0,.2); padding: 20px 30px; }
+.panel-default .panel-heading { text-align: center; padding: 26px 10px; font-size: 19px;}
+.panel-default .panel-heading >ul.dropdown { clear:both; color: #5e5e5e; list-style: none; }
+.panel-default .panel-heading >ul.dropdown > li { display: inline; padding-right: 25px;}
+.panel-default .panel-heading >ul.dropdown > li >a {  color: #5e5e5e; }
+.panel-default .panel-heading >ul.dropdown > li >a:hover { text-decoration: none; padding-bottom: 6px; border-bottom: solid 3px #ec971f; }
+.panel-default .panel-heading >ul.dropdown >li.active >a { clear:both; color: #ec971f;padding-bottom: 6px; border-bottom: solid 3px #ec971f; }
+
+input.bottom-no-radius { border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-bottom: none;}
+input.no-radius { -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border-bottom: none; }
+input.top-no-radius { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+#new_user > input {  height: 47px!important; line-height: 47px!important;}

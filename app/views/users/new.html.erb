@@ -1,0 +1,32 @@
+<%= title_tag 'sign up' %>
+<%= content_for :head do %>
+    <%= stylesheet_link_tag 'sign',  media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+<div class="col-md-4 col-md-offset-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <ul class="dropdown">
+        <%= nav_tag(controller: 'session') do %>
+          <%= link_to '登录', sign_in_path %>
+        <% end %>
+        <%= nav_tag(controller: 'users') do %>
+          <%= link_to '注册', sign_up_path %>
+        <% end %>
+      </ul>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@user, class: 'form-horizontal') do |f| %>
+        <div class="form-group">
+          <%= f.text_field :name, class: 'form-control bottom-no-radius', placeholder: '用户名' %>
+          <%= f.text_field :email, class: 'form-control no-radius', placeholder: '邮箱' %>
+          <%= f.password_field :password, class: 'form-control no-radius', placeholder: '密码' %>
+          <%= f.password_field :password_confirmation, class: 'form-control top-no-radius', placeholder: '确认密码' %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit '注册', class: 'btn btn-block btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

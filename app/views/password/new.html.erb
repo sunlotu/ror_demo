@@ -1,0 +1,9 @@
+<%= form_for @user, url: password_path do |f| %>
+  <div class="field">
+    <%= f.label :login %>
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.submit '确定' %>
+  </div>
+<% end %>

@@ -1,0 +1,16 @@
+<%= form_for @user, url: password_path, html: { method: :put } do |f| %>
+  <%= f.hidden_field :reset_password_token %>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= f.submit '确定' %>
+  </div>
+<% end %>

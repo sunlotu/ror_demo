@@ -1,0 +1,22 @@
+<ul class="nav navbar-nav navbar-meun">
+  <%= nav_tag(controller: 'welcome') do %>
+      <%= link_to '首页', welcome_path %>
+  <% end %>
+
+  <% if current_user && current_user.admin?  %>
+    <%= nav_tag(controller: %w(admin/users admin/roles)) do %>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        帐号管理
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <%= nav_tag(controller: 'admin/users') do %>
+          <%= link_to '用户管理', admin_users_path %>
+        <% end %>
+        <%= nav_tag(controller: 'admin/roles') do %>
+          <%= link_to '角色管理', admin_roles_path %>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</ul>

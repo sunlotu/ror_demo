@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : 'RoR Demo'%></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= content_for?(:head)? yield(:head) : '' %>
+  </head>
+
+  <body>
+    <% unless current_page?(%w(/auth/sign_in /auth/sign_up))  %>
+      <div class="header">
+        <nav class="navbar navbar-fixed-top navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <%= link_to 'ROR', nil, class: 'navbar-brand' %>
+            </div>
+            <div class="collpase navbar-collpase">
+              <%= render "layouts/navbar" %>
+              <%= render "layouts/usernav" %>
+            </div>
+          </div>
+        </nav>
+      </div>
+    <% end %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= render 'layouts/flash' %>
+          <%= main_container(yield) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
