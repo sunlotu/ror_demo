@@ -11,7 +11,11 @@ module ApplicationHelper
   end
 
   def title_tag(str)
-    content_for :title, raw("#{str}")
+    content_for( :title) { raw("#{str}") }
+  end
+
+  def head_tag
+    content_for (:head){ stylesheet_link_tag 'sign', media: 'all', 'data-turbolinks-track': 'reload' }
   end
 
   def panel_tag(str)
@@ -26,7 +30,6 @@ module ApplicationHelper
     content_for?(:panel) ? panel_container { block } : block
   end
 
-  # current_page?
   def current_page?(*pages)
     pages.flatten.compact.any?{ |page| page == request.fullpath }
   end

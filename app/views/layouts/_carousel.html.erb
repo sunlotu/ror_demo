@@ -1,0 +1,45 @@
+<div id="carousel-generic" class="carousel slider" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-generic" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag 'slide1.jpg'%>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag 'slide2.jpg'%>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag 'slide3.jpg'%>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag 'slide4.jpg'%>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+  </div>
+  <%= link_to '#carousel-generic', class: 'left carousel-control', role: 'button', data: {slide: 'prev'} do %>
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  <% end %>
+  <%= link_to '#carousel-generic', class: 'right carousel-control', role: 'button', data: {slide: 'next'} do %>
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  <% end %>
+</div>

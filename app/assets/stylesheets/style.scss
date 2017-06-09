@@ -1,0 +1,107 @@
+$color-w: #ffffff;
+body {
+  background: $color-w;
+  letter-spacing: .03em;
+  padding-top: 65px;
+}
+
+.navbar-default {
+  background: $color-w;
+  border-color: $color-w;
+  line-height: 38px;
+  padding-top: 10px;
+}
+
+.nav-active {
+  background-color: $color-w;
+  color: #EB5424
+}
+
+.navbar-default .navbar-nav.navbar-meun >li > a:hover,
+.navbar-default .navbar-nav.navbar-meun >li.active > a,
+  //.navbar-default .navbar-nav.navbar-meun >li.active > a:hover { color: #ec971f; background-color: #ffffff; border-bottom: solid 3px #ec971f }
+.navbar-default .navbar-nav.navbar-meun >li.active > a:hover {
+  @extend .nav-active;
+}
+//.navbar-default .navbar-nav.navbar-meun >li.active > a:hover { background-color: #ffffff; border-bottom: solid 3px #ec971f }
+.navbar-default .navbar-nav.navbar-right >li.active > a,
+.navbar-default .navbar-nav.navbar-right >li.active > a:hover {
+  background-color: $color-w;
+}
+.navbar-user {
+  color: #5e5e5e;
+  margin-top: 14px;
+}
+.nav.navbar-nav.navbar-right >li.active.open >ul.dropdown-menu >li.active >a {
+  @extend .nav-active;
+}
+
+//.nav.nav-pills.nav-stacked >li >a { color: #666666; }
+//.nav.nav-pills.nav-stacked >li.active >a { background: #ec971f; color: #ffffff; }
+
+.panel-default{
+  border: solid 1px $color-w;
+  background: $color-w
+}
+.panel-default .panel-heading {
+  padding: 6px 10px;
+  color: #9d9d9d;
+  background-color: $color-w;
+  border: solid 1px $color-w
+}
+//.panel-default .panel-heading >li.active >ul.dropdown-menu >a { color: #EB5424 }
+
+//.container-box { background-color: #ffffff; border-radius: 4px; }
+//.captcha { width: 120px; height: 42px; }
+
+// tables
+.table{
+  tr{
+    &:hover td{
+      background: #d9edf7;
+    }
+  }
+}
+
+
+.bk{
+  width: 100%;
+  height: 490px;
+  position: absolute;
+  top: 0;
+  background: url(asset-path('bk.jpg')) no-repeat;
+  background-size:cover;
+}
+
+.home {
+  padding-top: 20px;
+}
+
+.footer{
+  height: 120px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-link{
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #f0f0f0;
+
+}
+
+.tag-a{
+  text-decoration: none;
+  color: #9d9d9d;
+}
+
+.footer-link > a{
+@extend .tag-a
+}
+
+.footer-copyright {
+  @extend .tag-a;
+  text-align: center;
+  padding: 20px 0;
+}

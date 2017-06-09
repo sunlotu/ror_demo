@@ -12,10 +12,11 @@
   <body>
     <% unless current_page?(%w(/auth/sign_in /auth/sign_up))  %>
       <div class="header">
+        <div class="bk"></div>
         <nav class="navbar navbar-fixed-top navbar-default">
-          <div class="container">
+          <div class="container-fluid">
             <div class="navbar-header">
-              <%= link_to 'ROR', nil, class: 'navbar-brand' %>
+              <%= link_to 'ROR', welcome_path, class: 'navbar-brand logo' %>
             </div>
             <div class="collpase navbar-collpase">
               <%= render "layouts/navbar" %>
@@ -31,6 +32,10 @@
         <div class="col-md-12">
           <%= render 'layouts/flash' %>
           <%= main_container(yield) %>
+        </div>
+
+        <div class="footer col-md-8">
+          <%= render 'layouts/footer' %>
         </div>
       </div>
     </div>
