@@ -38,8 +38,10 @@ gem 'pundit'
 # Use Capistrano for deployment
 gem 'capistrano'
 gem 'capistrano-rails'
+gem 'capistrano-rails-console'
+gem 'capistrano-bundler'
 gem 'capistrano-rbenv'
-gem 'capistrano3-puma', require: false
+gem 'capistrano3-puma'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
