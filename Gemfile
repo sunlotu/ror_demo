@@ -10,7 +10,7 @@ gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,11 +37,11 @@ gem 'pundit'
 
 # Use Capistrano for deployment
 gem 'capistrano'
-gem 'capistrano-rails'
+gem 'capistrano-rails','~> 1.3.0'
 gem 'capistrano-rails-console'
-gem 'capistrano-bundler'
+gem 'capistrano-bundler', '~> 1.2.0'
 gem 'capistrano-rbenv'
-gem 'capistrano3-puma'
+gem 'capistrano3-puma', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
