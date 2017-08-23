@@ -10,7 +10,7 @@ role :app, %w{lian@127.0.0.1}     #服务器地址
 role :web, %w{lian@127.0.0.1}
 role :db,  %w{lian@127.0.0.1}
 server '127.0.0.1', user: 'lian', roles: %w{web app db}
-server '127.0.0.1', user: 'lian', roles: %w{sudoer}, no_release: true
+# server '127.0.0.1', user: 'lian', roles: %w{sudoer}, no_release: true
 
 set stage: :production
 set :deploy_to, "/home/#{fetch(:user)}/deploy/#{fetch(:application)}"
